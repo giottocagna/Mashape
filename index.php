@@ -83,6 +83,8 @@ function explore(){
  echo "explore aperto";
     
     $html = file_get_html('https://www.mashape.com/explore');
+    print_r($html);
+    
    print_r(error_get_last());
     
     /*
