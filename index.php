@@ -105,10 +105,14 @@ function explore(){
         foreach($element->find('img') as $img)
             array_push($image_owner,$img->src);
         }
+        if($element->class="logo-row clearfix"){
+            echo $element->src;
+            echo "<br";
+        }
     }
     $result = array_merge($name,$owner);
     $result1=array_merge($result,$image_owner);
-    echo json_encode($result1);
+  //  echo json_encode($result1);
     
     
  
