@@ -102,7 +102,8 @@ function explore(){
     if( $element->class =="owner"){
             //echo $element->plaintext."<br>";
             array_push($owner, $element->plaintext);
-            array_push($image,$element->src);
+        foreach($element->find('img') as $img)
+            array_push($image,$img->src);
         }
     }
     $result = array_merge($name,$owner);
