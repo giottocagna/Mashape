@@ -44,9 +44,11 @@ function explore(){
 }
 */
 
-function switch($q){
+function switch($q)
+{
+    
     echo $q;
- switch ($q) {
+ /*switch ($q) {
     case "find":     
         echo "find";
         break;
@@ -55,7 +57,8 @@ function switch($q){
       echo "explore";
         break;
      
-}
+}*/
+    
 }
 
 
