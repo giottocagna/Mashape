@@ -52,7 +52,8 @@ print_r(error_get_last());
 if((isset($_GET['query']))&&($_GET['query']!=null)) {
     // query index exists
     $query=$_GET['query'];
-   sw($query);
+  // sw($query);
+    explore();
    
         print_r(error_get_last());
     
@@ -88,8 +89,10 @@ function explore(){
    
     
     
-   foreach($html->find('h4') as $element) 
+    foreach($html->find('h4') as $element) {
        print_r($element);
+    }
+     print_r(error_get_last());
      
     
 }
