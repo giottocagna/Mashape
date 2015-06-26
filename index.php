@@ -82,8 +82,11 @@ function explore(){
     
  echo "explore aperto";
     
-  /*  $html = file_get_html('https://www.mashape.com/explore');
-    foreach($html->find('h4') as $element) 
+    $html = file_get_html('https://www.mashape.com/explore');
+   
+    
+    /*
+   foreach($html->find('h4') as $element) 
        echo $element->value . '<br>';
      print_r(error_get_last());
     */
