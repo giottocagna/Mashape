@@ -106,7 +106,7 @@ function explore(){
         foreach($element->find('img') as $img)
             array_push($image_owner,$img->src);
         }
-        if($element->class="logo-row clearfix"){
+        if($element->class="panel-body"){
             foreach($element->find("img") as $img)
                 array_push($image_api,$img->src);
         }
