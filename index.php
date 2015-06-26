@@ -89,7 +89,7 @@ function explore(){
    
     $name=array();
     $owner=array();
-            
+    $image=array();     
     foreach($html->find('h4') as $element) {
         if( $element->class =="name"){
             //echo $element->plaintext."<br>";
@@ -102,10 +102,10 @@ function explore(){
     if( $element->class =="owner"){
             //echo $element->plaintext."<br>";
             array_push($owner, $element->plaintext);
-               
+            array_push($image,$element->src);
         }
     }
-    $result = array_merge($name,$owner);
+    $result = array_merge($name,$owner,$image);
     echo json_encode($result);
   //  echo json_encode($owner);
      print_r(error_get_last());
