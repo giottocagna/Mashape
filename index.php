@@ -96,15 +96,18 @@ function explore(){
             array_push($name, $element->plaintext);
                
         }
-        if( $element->class =="owner"){
+        
+    }
+    foreach($html->find('div') as $element) {
+    if( $element->class =="owner"){
             //echo $element->plaintext."<br>";
             array_push($owner, $element->plaintext);
                
         }
     }
-   // $result = array_merge($name,$owner);
-   // echo json_encode($result);
-    echo json_encode($owner);
+    $result = array_merge($name,$owner);
+    echo json_encode($result);
+  //  echo json_encode($owner);
      print_r(error_get_last());
      
     
