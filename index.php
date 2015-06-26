@@ -1,7 +1,27 @@
 <?php
 
+
+
+
+
 require_once( "simple_html_dom.php");
+
+
+
+
+
+
+
+
+
 print_r(error_get_last());
+
+
+
+
+
+
+
 function sw($q)
 {
     
