@@ -46,11 +46,11 @@ function explore(){
 function switch($q){
  switch ($q) {
     case "find":     
-         find();
+        echo "find";
         break;
      
     case "explore":
-       explore();
+      echo "explore";
         break;
      
 }
