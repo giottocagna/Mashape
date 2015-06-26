@@ -115,7 +115,7 @@ function explore(){
     $result1=array_merge($result,$image_owner);
   //  echo json_encode($result1);
     
-    echo json_encode($image_api);
+    print_r($image_api);
  
      print_r(error_get_last());
      
