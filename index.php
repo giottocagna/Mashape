@@ -12,17 +12,16 @@ function explore(){
     
 }
 
-function switch(){
- switch ($query) {
-    case "find":
-     {
+function switch($q){
+ switch ($q) {
+    case "find":     
          find();
         break;
-     }
+     
     case "explore":
-     {  explore();
+       explore();
         break;
-     }
+     
 }
 }
 
@@ -31,18 +30,19 @@ function switch(){
 
 
 
-header('Content-Type: application/json');
-$query=null;
+
+
 
 if(isset($_GET['query'])) {
     // query index exists
     $query=$_GET['query'];
-    
+    switch($query);
     
         
     
 }
 else{
+    header('Content-Type: application/json');
     $data=['Error'=>'Query Null'];
     
 echo json_encode($data);
