@@ -35,9 +35,9 @@ print_r(error_get_last());
 
 if(isset($_GET['query'])) {
     // query index exists
-    $query=$_GET['query'];
-    switch($query);
-    
+  //  $query=$_GET['query'];
+    //switch($query);
+    echo "ciao";
         print_r(error_get_last());
     
 }
