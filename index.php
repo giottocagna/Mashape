@@ -90,7 +90,9 @@ function explore(){
     
     
     foreach($html->find('h4') as $element) {
-        echo $element->class . '<br>';
+        if( $element->class =="name"){
+            echo $element->plaintext."<br>";
+        }
     }
      print_r(error_get_last());
      
