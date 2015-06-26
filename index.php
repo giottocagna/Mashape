@@ -102,8 +102,9 @@ function explore(){
                
         }
     }
-    $result = array_merge($name,$owner);
-    echo json_encode($result);
+   // $result = array_merge($name,$owner);
+   // echo json_encode($result);
+    echo json_encode($owner);
      print_r(error_get_last());
      
     
