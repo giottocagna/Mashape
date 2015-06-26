@@ -106,7 +106,7 @@ function explore(){
         }
     }
     $result = array_merge($name,$owner);
-    echo json_encode($result);
+  //  echo json_encode($result);
     echo "<br";
     echo json_encode($image);
   //  echo json_encode($owner);
