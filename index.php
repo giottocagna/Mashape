@@ -4,7 +4,7 @@
 
 
 
-//include("simple_html_dom.php");
+include("simple_html_dom.php");
 
 
 
@@ -79,7 +79,7 @@ function find(){
 
 
 function explore(){
-    echo explore();
+ 
     $html = file_get_html('https://www.mashape.com/explore');
     foreach($html->find('h4') as $element) 
        echo $element->value . '<br>';
