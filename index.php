@@ -105,8 +105,10 @@ function explore(){
             array_push($image,$element->src);
         }
     }
-    $result = array_merge($name,$owner,$image);
+    $result = array_merge($name,$owner);
     echo json_encode($result);
+    echo "<br";
+    echo json_encode($image);
   //  echo json_encode($owner);
      print_r(error_get_last());
      
