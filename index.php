@@ -89,7 +89,7 @@ function explore(){
     
     
    foreach($html->find('h4') as $element) 
-       echo $element->value . '<br>';
+       print_r($element);
      
     
 }
