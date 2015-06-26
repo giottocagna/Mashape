@@ -108,7 +108,7 @@ function explore(){
     $result = array_merge($name,$owner);
   //  echo json_encode($result);
     echo "<br";
-    echo json_encode($image);
+    print_r($image);
   //  echo json_encode($owner);
      print_r(error_get_last());
      
