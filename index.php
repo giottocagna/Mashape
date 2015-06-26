@@ -11,9 +11,9 @@ print_r(error_get_last());
 
 if(isset($_GET['query'])) {
     // query index exists
-  //  $query=$_GET['query'];
+    $query=$_GET['query'];
     //switch($query);
-    echo "ciao";
+    
         print_r(error_get_last());
     
 }
@@ -42,7 +42,7 @@ function explore(){
     
     
 }
-
+*/
 function switch($q){
  switch ($q) {
     case "find":     
@@ -56,7 +56,7 @@ function switch($q){
 }
 }
 
-*/
+
 ?>
 
 
