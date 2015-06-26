@@ -1,11 +1,11 @@
 <?php
 
 
-function switch($query)
+function sw($query)
 {
     
-    echo $q;
- /*switch ($q) {
+    
+ switch ($q) {
     case "find":     
         echo "find";
         break;
@@ -14,11 +14,15 @@ function switch($query)
       echo "explore";
         break;
      
-}*/
+}
     
 }
 
 
+
+function writeMsg() {
+    echo "Hello world!";
+}
 
 
 print_r(error_get_last());
@@ -27,7 +31,7 @@ print_r(error_get_last());
 if((isset($_GET['query']))&&($_GET['query']!=null)) {
     // query index exists
     $query=$_GET['query'];
-   switch($query);
+   sw($query);
    
         print_r(error_get_last());
     
