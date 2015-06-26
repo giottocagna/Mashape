@@ -1,7 +1,22 @@
 <?php
 
 
-
+function switch($query)
+{
+    
+    echo $q;
+ /*switch ($q) {
+    case "find":     
+        echo "find";
+        break;
+     
+    case "explore":
+      echo "explore";
+        break;
+     
+}*/
+    
+}
 
 
 
@@ -44,22 +59,7 @@ function explore(){
 }
 */
 
-function switch($q)
-{
-    
-    echo $q;
- /*switch ($q) {
-    case "find":     
-        echo "find";
-        break;
-     
-    case "explore":
-      echo "explore";
-        break;
-     
-}*/
-    
-}
+
 
 
 ?>
