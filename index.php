@@ -87,15 +87,23 @@ function explore(){
    
     
    
-    $name=arrey();
+    $name=array();
+    $owner=array();
             
     foreach($html->find('h4') as $element) {
         if( $element->class =="name"){
             //echo $element->plaintext."<br>";
-            array_push($array, $element->plaintext);
+            array_push($name, $element->plaintext);
+               
+        }
+        if( $element->class =="owner"){
+            //echo $element->plaintext."<br>";
+            array_push($owner, $element->plaintext);
                
         }
     }
+    $result = array_merge($name,$owner);
+    echo json_encode($result);
      print_r(error_get_last());
      
     
