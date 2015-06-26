@@ -9,7 +9,7 @@ else{
     $data=['Error'=>'Query Null'];
     
 echo json_encode($data);
-    echo "cazzo";
+    
 }
 
 ?>
