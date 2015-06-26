@@ -30,7 +30,7 @@ function switch($q){
 
 
 
-
+print_r(error_get_last());
 
 
 if(isset($_GET['query'])) {
@@ -38,7 +38,7 @@ if(isset($_GET['query'])) {
     $query=$_GET['query'];
     switch($query);
     
-        
+        print_r(error_get_last());
     
 }
 else{
@@ -46,11 +46,12 @@ else{
     $data=['Error'=>'Query Null'];
     
 echo json_encode($data);
+    print_r(error_get_last());
     
 }
 
 
-
+print_r(error_get_last());
 
 ?>
 
