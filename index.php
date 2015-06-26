@@ -48,7 +48,7 @@ function writeMsg() {
 
 print_r(error_get_last());
 
-
+ explore();
 if((isset($_GET['query']))&&($_GET['query']!=null)) {
     // query index exists
     $query=$_GET['query'];
@@ -90,7 +90,7 @@ function explore(){
     
     
     foreach($html->find('h4') as $element) {
-       print_r($element);
+        echo $element->class . '<br>';
     }
      print_r(error_get_last());
      
