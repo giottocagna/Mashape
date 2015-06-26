@@ -3,8 +3,7 @@
 
 
 
-echo "ciao";
-/*
+
 
 
 print_r(error_get_last());
@@ -19,7 +18,7 @@ if(isset($_GET['query'])) {
     
 }
 else{
-    echo "ciao";
+    
     header('Content-Type: application/json');
     $data=['Error'=>'Query Null'];
     
@@ -27,6 +26,8 @@ echo json_encode($data);
     print_r(error_get_last());
     
 }
+/*
+
 
 
 print_r(error_get_last());
