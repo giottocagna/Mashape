@@ -1,7 +1,7 @@
 <?php
 
 
-function sw($query)
+function sw($q)
 {
     
     
