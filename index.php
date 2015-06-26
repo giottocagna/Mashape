@@ -89,7 +89,8 @@ function explore(){
    
     $name=array();
     $owner=array();
-    $image_owner=array();     
+    $image_owner=array();    
+    $image_api=array();
     foreach($html->find('h4') as $element) {
         if( $element->class =="name"){
             //echo $element->plaintext."<br>";
@@ -106,15 +107,15 @@ function explore(){
             array_push($image_owner,$img->src);
         }
         if($element->class="logo-row clearfix"){
-            echo $element->src;
-            echo "<br";
+            foreach($element->find("img") as $img)
+                array_push($image_api,$img->src);
         }
     }
     $result = array_merge($name,$owner);
     $result1=array_merge($result,$image_owner);
   //  echo json_encode($result1);
     
-    
+    echo json_encode($image_api);
  
      print_r(error_get_last());
      
