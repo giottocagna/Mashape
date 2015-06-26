@@ -48,12 +48,12 @@ function writeMsg() {
 
 print_r(error_get_last());
 
- explore();
+ 
 if((isset($_GET['query']))&&($_GET['query']!=null)) {
     // query index exists
     $query=$_GET['query'];
-  // sw($query);
-    explore();
+   sw($query);
+    
    
         print_r(error_get_last());
     
