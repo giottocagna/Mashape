@@ -7,15 +7,15 @@ function sw($q)
     
  switch ($q) {
     case "find":     
-        echo "find";
+        find();
         break;
      
     case "explore":
-      echo "explore";
+     explore();
         break;
      
 }
-    
+    print_r(error_get_last());
 }
 
 
@@ -45,11 +45,11 @@ echo json_encode($data);
     print_r(error_get_last());
     
 }
-/*
 
 
 
-print_r(error_get_last());
+
+
 function find(){
     
     
@@ -59,9 +59,11 @@ function find(){
 
 function explore(){
     
+    $html = file_get_html('https://www.mashape.com/explore');
+    
     
 }
-*/
+
 
 
 
