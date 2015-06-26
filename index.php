@@ -58,10 +58,11 @@ function find(){
 
 
 function explore(){
-    
+    echo explore();
     $html = file_get_html('https://www.mashape.com/explore');
     foreach($html->find('h4') as $element) 
        echo $element->value . '<br>';
+     print_r(error_get_last());
     
 }
 
