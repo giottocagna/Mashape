@@ -87,11 +87,13 @@ function explore(){
    
     
    
-    
-    
+    $name=arrey();
+            
     foreach($html->find('h4') as $element) {
         if( $element->class =="name"){
-            echo $element->plaintext."<br>";
+            //echo $element->plaintext."<br>";
+            array_push($array, $element->plaintext);
+               
         }
     }
      print_r(error_get_last());
