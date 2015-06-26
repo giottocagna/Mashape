@@ -9,7 +9,7 @@
 print_r(error_get_last());
 
 
-if(isset($_GET['query'])) {
+if((isset($_GET['query']))&&($_GET['query']!=null)) {
     // query index exists
     $query=$_GET['query'];
     //switch($query);
