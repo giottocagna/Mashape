@@ -36,18 +36,17 @@ function sw($q)
         break;
      
 }
+    
+    
     print_r(error_get_last());
 }
 
 
 
-function writeMsg() {
-    echo "Hello world!";
-}
 
 
-print_r(error_get_last());
 
+header('Content-Type: application/json');
  
 if((isset($_GET['query']))&&($_GET['query']!=null)) {
     // query index exists
@@ -61,9 +60,12 @@ if((isset($_GET['query']))&&($_GET['query']!=null)) {
 else{
     
     header('Content-Type: application/json');
+   
     $data=['Error'=>'Query Null'];
     
 echo json_encode($data);
+  
+    
     print_r(error_get_last());
     
 }
