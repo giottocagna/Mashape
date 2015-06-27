@@ -118,6 +118,9 @@ function explore(){
                     foreach($div->find("p") as $p)
                    array_push($desc,$p->plaintext);
                   
+                    foreach($div->find("div") as $price)
+                        if($price->class=="price text-center")
+                        echo $price->plaintext."<br>";
                }
                     
             }
@@ -126,7 +129,7 @@ function explore(){
     $result = array_merge($name,$owner);
     $result1=array_merge($result,$image_owner);
     $result2=array_merge($result1,$image_api);
-         print_r($desc);
+        
    // echo json_encode($result2);
     
    
