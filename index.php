@@ -114,11 +114,11 @@ function explore(){
                foreach($div->find("img") as $img)
                 array_push($image_api,$img->src);
                 
-                if($div->class=="description"){
+              //  if($div->class=="description"){
                    // foreach($div->find("p") as $p)
                    // array_push($desc,$p->plaintext);
-                    echo "description <br>";
-                }
+                    echo $div->class."<br>";
+               // }
                     
             }
         }
