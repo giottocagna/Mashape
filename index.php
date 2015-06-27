@@ -109,12 +109,15 @@ function explore(){
         }
         if($element->class=="panel-body"){
             foreach($element->find("div") as $div){
+                
+                
                foreach($div->find("img") as $img)
                 array_push($image_api,$img->src);
                 
                 if($div->class=="description"){
-                    foreach($div->find("p") as $p)
-                    array_push($desc,$p->plaintext);
+                   // foreach($div->find("p") as $p)
+                   // array_push($desc,$p->plaintext);
+                    echo "description <br>";
                 }
                     
             }
@@ -123,7 +126,7 @@ function explore(){
     $result = array_merge($name,$owner);
     $result1=array_merge($result,$image_owner);
     $result2=array_merge(($result1,$image_api);
-                         print_r($desc);
+         print_r($desc);
    // echo json_encode($result2);
     
    
