@@ -15,6 +15,8 @@ function explore(){
     $image_api=array();
     $desc=array();
     $prices=array();
+    $links=array();
+    $i=0;
     foreach($html->find('h4') as $element) {
         if( $element->class =="name"){
             //echo $element->plaintext."<br>";
@@ -27,6 +29,8 @@ function explore(){
     if( $element->class =="owner"){
             //echo $element->plaintext."<br>";
             array_push($owner, $element->plaintext);
+        array_push($links,"https://www.mashape.com/".$element->plaintext."/".$name[$i]);
+        $i++;
         foreach($element->find('img') as $img)
             array_push($image_owner,$img->src);
         }
@@ -49,14 +53,13 @@ function explore(){
             }
         }
     }
-    echo json_encode($name)."<br>";
-      echo json_encode($owner)."<br>";  
-    echo json_encode($image_owner)."<br>";   
-   echo json_encode($image_api)."<br>";    
-   echo json_encode($desc)."<br>"; 
-  echo json_encode($prices)."<br>";    
-   
     
+    
+    $array=array("name"=>$name,"owner"=>$owner,"image_owner"=>$image_owner,"image_api"=>$image_api,"desc"=>$desc,"prices"=>$prices,"links"=>$links);
+     
+   
+   echo json_encode($array);
+  //  print_r($array);
    
  
      
