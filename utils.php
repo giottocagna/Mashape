@@ -1,11 +1,11 @@
     <?php
+error_reporting(E_ALL);
 
-
-function explore(){
+function explore($url){
     
 
     
-    $html = file_get_html('https://www.mashape.com/explore');
+    $html = file_get_html($url);
    
     
    
@@ -66,6 +66,54 @@ function explore(){
      
     
 }
+
+
+
+function find(){
+    
+    header('Content-Type: text/html; charset=utf-8');
+    if((isset($_GET['type']))&&($_GET['type']!=null)&&((isset($_GET['parameter']))&&($_GET['parameter']!=null)) ) {
+    //echo "find aperto";
+  
+  explore('https://www.mashape.com/explore'.switch_type($_GET['type']).$_GET['parameter']);
+     
+        
+       
+        
+        
+        
+         }
+    else{
+        
+         $data=array('Error'=>'Erorr in Query');
+    
+echo json_encode($data);
+    }
+    
+}
+
+
+
+
+
+function switch_type($t){
+ 
+    switch($t)
+    {
+     case "tags":     
+       return "?tags=";
+        break;
+     
+    case "search":
+     return "?query=";
+        break;
+    }
+    
+}
+
+
+
+
 
 ?>
     

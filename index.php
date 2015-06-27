@@ -2,7 +2,7 @@
 
 
 
-
+error_reporting(E_ALL);
 
 include("simple_html_dom.php");
 include("utils.php");
@@ -22,24 +22,7 @@ include("utils.php");
 
 
 
-function sw($q)
-{
-    
-    
- switch ($q) {
-    case "find":     
-        find();
-        break;
-     
-    case "explore":
-     explore();
-        break;
-     
-}
-    
-    
-  //  print_r(error_get_last());
-}
+
 
 
 
@@ -74,11 +57,37 @@ echo json_encode($data);
 
 
 
-function find(){
-    echo "find aperto";
-    
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+function sw($q)
+{
+    
+    
+ switch ($q) {
+    case "find":     
+        find();
+        break;
+     
+    case "explore":
+     explore("https://www.mashape.com/explore");
+        break;
+     
+}
+    
+    
+  //  print_r(error_get_last());
+}
 
 
 
