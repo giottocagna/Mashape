@@ -92,6 +92,7 @@ function explore(){
     $image_owner=array();    
     $image_api=array();
     $desc=array();
+    $prices=array();
     foreach($html->find('h4') as $element) {
         if( $element->class =="name"){
             //echo $element->plaintext."<br>";
@@ -120,17 +121,19 @@ function explore(){
                   
                     foreach($div->find("div") as $price)
                         if($price->class=="price text-center")
-                        echo $price->plaintext."<br>";
+                        array_push($prices,$price->plaintext);
                }
                     
             }
         }
     }
-    $result = array_merge($name,$owner);
-    $result1=array_merge($result,$image_owner);
-    $result2=array_merge($result1,$image_api);
-        
-   // echo json_encode($result2);
+    echo json_encode($name)."<br>";
+      echo json_encode($owner)."<br>";  
+    echo json_encode($image_owner)."<br>";   
+   echo json_encode($image_api)."<br>";    
+   echo json_encode($desc)."<br>"; 
+  echo json_encode($prices)."<br>";    
+   
     
    
  
