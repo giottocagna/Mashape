@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 
 function explore(){
@@ -59,9 +59,10 @@ function explore(){
     
    
  
-     print_r(error_get_last());
+     
      
     
 }
 
 ?>
+    

@@ -14,7 +14,7 @@ include("utils.php");
 
 
 
-print_r(error_get_last());
+
 
 
 
@@ -38,7 +38,7 @@ function sw($q)
 }
     
     
-    print_r(error_get_last());
+  //  print_r(error_get_last());
 }
 
 
@@ -54,19 +54,19 @@ if((isset($_GET['query']))&&($_GET['query']!=null)) {
    sw($query);
     
    
-        print_r(error_get_last());
+   //     print_r(error_get_last());
     
 }
 else{
     
     header('Content-Type: application/json');
    
-    $data=['Error'=>'Query Null'];
+    $data=array('Error'=>'Query Null');
     
 echo json_encode($data);
   
     
-    print_r(error_get_last());
+ //   print_r(error_get_last());
     
 }
 
