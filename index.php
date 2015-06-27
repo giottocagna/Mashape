@@ -91,6 +91,7 @@ function explore(){
     $owner=array();
     $image_owner=array();    
     $image_api=array();
+    $desc=array();
     foreach($html->find('h4') as $element) {
         if( $element->class =="name"){
             //echo $element->plaintext."<br>";
@@ -107,16 +108,24 @@ function explore(){
             array_push($image_owner,$img->src);
         }
         if($element->class=="panel-body"){
-            foreach($element->find("div") as $div)
+            foreach($element->find("div") as $div){
                foreach($div->find("img") as $img)
                 array_push($image_api,$img->src);
+                
+                if($div->class=="description")
+                    foreach($div->find("p") as $p)
+                    array_push($desc,$p->plaintext);
+                    
+            }
         }
     }
     $result = array_merge($name,$owner);
     $result1=array_merge($result,$image_owner);
-  //  echo json_encode($result1);
+    $result2=array_merge(($result1,$image_api);
+                         print_r($desc);
+   // echo json_encode($result2);
     
-    print_r($image_api);
+   
  
      print_r(error_get_last());
      
